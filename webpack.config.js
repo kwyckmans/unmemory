@@ -1,6 +1,7 @@
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 
 const plugins = [
@@ -14,7 +15,8 @@ const plugins = [
                 failOnHint: true
             }
         }
-    })
+    }),
+    new FaviconsWebpackPlugin('./beer.png')    
 ];
 
 module.exports = {
@@ -36,11 +38,27 @@ module.exports = {
     },
     plugins: plugins,
     module: {
-        rules: [
-            { test: /\.tsx?$/, loader: "ts-loader" },
-            { test: /\.js$/, loader: "source-map-loader", enforce:"pre" },
-            { test: /\.html$/, loader: 'html-loader' },
-            { test: /\.css$/, loaders: ['style-loader', 'css-loader'] }
+        rules: [{
+                test: /\.tsx?$/,
+                loader: "ts-loader"
+            },
+            {
+                test: /\.js$/,
+                loader: "source-map-loader",
+                enforce: "pre"
+            },
+            {
+                test: /\.html$/,
+                loader: 'html-loader'
+            },
+            {
+                test: /\.css$/,
+                loaders: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                loader: 'file-loader'
+            }
         ]
     },
     devServer: {
@@ -48,6 +66,5 @@ module.exports = {
         compress: true,
         port: 3000,
         hot: true
-    }
-    // Other options...
+    }, // Other options...
 };

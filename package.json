@@ -4,16 +4,18 @@
   "license": "None",
   "main": "src/index.ts",
   "dependencies": {
-      "lodash":"^4.17.5"
+    "lodash": "^4.17.5"
   },
   "private": true,
   "devDependencies": {
-    "@types/lodash":"^4.14.106",
+    "@types/lodash": "^4.14.106",
     "awesome-typescript-loader": "^4.0.1",
     "css-loader": "^0.28.4",
     "eslint": "^4.2.0",
     "html-loader": "^0.4.5",
     "html-webpack-plugin": "^3.1.0",
+    "file-loader": "^1.1.11",
+    "favicons-webpack-plugin": "^0.0.8",
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.20.3",
     "ts-loader": "^4.1.0",
@@ -26,7 +28,7 @@
     "yarn": "^1.5.1"
   },
   "scripts": {
-    "start": "yarn run server:dev",
+    "start": "npm run server:dev",
     "server:dev": "webpack-dashboard -- webpack-dev-server --config ./webpack.config.js --hot --inline --progress --watch --open",
     "build": "yarn run build:dev",
     "build:dev": "webpack --config ./webpack.config.js --progress --profile --color --display-error-details --display-cached"
