@@ -8,18 +8,58 @@ body {
     color: #454545;
     line-height: 1.4;
     font-size: 16pt;
+    font-family: 'Alegreya Sans', sans-serif;
 }
 
 ul {
     list-style-type: none;
 }
 
+h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+}
+
+input {
+    outline: 0;
+    border-width: 0 0 2px 0;
+    background-color: #eeeeee;
+    border-color: #454545;
+    padding-bottom: 10px;
+    font-size: 16pt;
+    text-align: center;
+}
+
+input:focus {
+    border-color: #ccc;
+}
+
+/* #add-player {
+    display: inline-block;
+    background-color: transparent;
+} */
+
+/* .button {
+    line-height: normal;
+    box-sizing: border-box;
+    display: inline-block;
+    zoom: 1;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 100%;
+    padding: .5em 1em;
+    text-decoration: none;
+    border: transparent;
+} */
+
 #unmemory {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-
 }
 
 #registration {
@@ -29,6 +69,6 @@ ul {
     text-align: center;
 }
 
-#game-screen{
+#game-screen {
     display: none;
 }

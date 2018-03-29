@@ -32,7 +32,7 @@ export class Game {
         gameScreen.style.display = "block";
         
         let card1 = new Card(1, "hello");
-        gameScreen.appendChild(card1.visual);
+        gameScreen.appendChild(card1.getHtml);
     }
 
     private clearNewPlayerField(){

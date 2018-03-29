@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <title>
-            <%= htmlWebpackPlugin.options.title %>
-        </title>
-        
-        <meta name="description" content="<%= htmlWebpackPlugin.options.title %>">
-    </head>
-    <body>
-        <div id='unmemory'>
-            <div id='registration'>
-                <div class="title">
-                    <h1>!Memory</h1>
-                </div>
-                <div class="content">
-                    <h2>Add players</h2>
-                    <div id="registered-players">
-                        <ul id="players">
 
-                        </ul>
-                    </div>
-                    <input id='new-player' placeholder="Enter name..." />
-                    <button id='add-player'>Add</button>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans|Merriweather|Merriweather+Sans|Nunito|Nunito+Sans|Quattrocento|Quattrocento+Sans|Roboto|Roboto+Mono|Roboto+Slab"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
+        crossorigin="anonymous">
+
+    <meta name="description" content="<%= htmlWebpackPlugin.options.title %>">
+
+</head>
+
+<body>
+    <div id='unmemory'>
+        <div id='registration'>
+            <div class="title">
+                <h1>¬MEMORY</h1>
+            </div>
+            <div class="content">
+                <h2>Add players</h2>
+                <div id="registered-players">
+                    <ul id="players">
+
+                    </ul>
                 </div>
-                <button id='start-game'>START GAME</button>
+                <input id='new-player' placeholder="Enter name..." onfocus="this.placeholder = ''" />
+<button type="button" class="btn btn-dark" id='add-player'>
+                    <i class="fas fa-plus"></i>
+                </button>
             </div>
-            <div id="game-screen">
-                <p>GAME</p>
-            </div>
+            <hr>
+        <button id='start-game' type="button" class="btn btn-warning">START GAME</button>
         </div>
-    </body>
+        <div id="game-screen">
+            <p>GAME</p>
+        </div>
+    </div>
+</body>
+
 </html>

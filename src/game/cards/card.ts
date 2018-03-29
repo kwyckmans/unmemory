@@ -1,4 +1,4 @@
-import '../../assets/card.jpg';
+import * as card from '../../assets/card.jpg';
 
 export class Card {
     private visuals: HTMLElement;
@@ -8,8 +8,8 @@ export class Card {
         private text: string,
     ){
         this.visuals =  document.createElement('img');
-        this.visuals.setAttribute("src", "../../assets/card.jpg");
+        this.visuals.setAttribute("src", card);
     }
 
-    get visual() : HTMLElement { return this.visuals; }
+    get getHtml() : HTMLElement { return this.visuals; }
 }
