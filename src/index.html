@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>Verget uwe naam en al de rest!!</title>
-        <link rel='stylesheet' href='dist/style.css'>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>
+            <%= htmlWebpackPlugin.options.title %>
+        </title>
+        
+        <meta name="description" content="<%= htmlWebpackPlugin.options.title %>">
     </head>
     <body>
-        <script src="bundle.js"></script>
+        <div id='unmemory'>
+            <div id='registration'>
+                <div class="title">
+                    <h1>!Memory</h1>
+                </div>
+                <div class="content">
+                    <h2>Add players</h2>
+                    <div id="registered-players">
+                        <ul id="players">
+
+                        </ul>
+                    </div>
+                    <input id='new-player' placeholder="Enter name..." />
+                    <button id='add-player'>Add</button>
+                </div>
+                <button id='start-game'>START GAME</button>
+            </div>
+            <div id="game-screen">
+                <p>GAME</p>
+            </div>
+        </div>
     </body>
 </html>

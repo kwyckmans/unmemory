@@ -6,7 +6,9 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const plugins = [
     new HtmlWebpackPlugin({
-        title: 'Typescript Webpack Starter',
+        title: 'Verget uwe naam en al de rest!!',        
+        template: '!!ejs-loader!src/index.html',
+        favicon: 'beer.png'
     }),
     new webpack.LoaderOptionsPlugin({
         options: {
@@ -16,7 +18,7 @@ const plugins = [
             }
         }
     }),
-    new FaviconsWebpackPlugin('./beer.png')    
+    new FaviconsWebpackPlugin('./beer.png')
 ];
 
 module.exports = {
@@ -27,6 +29,7 @@ module.exports = {
     output: {
         path: path.resolve('./dist'),
         filename: '[name].bundle.js',
+        
     },
     mode: "development",
     // Enable sourcemaps for debugging webpack's output.
@@ -57,9 +60,15 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif)$/,
-                loader: 'file-loader'
+                loader: 'file-loader',
+                options: {
+                    name:'[path][name].[ext]'
+                }
             }
         ]
+    },
+    node: {
+        fs: "empty"
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist/'),

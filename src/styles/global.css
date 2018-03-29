@@ -4,5 +4,31 @@
 }
 
 body {
-    background-color: bisque;
+    background-color: #eeeeee;
+    color: #454545;
+    line-height: 1.4;
+    font-size: 16pt;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#unmemory {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+}
+
+#registration {
+    /* background-color: orangered; */
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+#game-screen{
+    display: none;
 }
