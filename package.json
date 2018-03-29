@@ -31,7 +31,7 @@
   },
   "scripts": {
     "start": "npm run server:dev",
-    "server:dev": "webpack-dashboard -- webpack-dev-server --config ./webpack.config.js  --display-error-details --hot --inline --progress --watch --open",
+    "server:dev": "webpack-dashboard -- webpack-dev-server --config ./webpack.config.js --hot --inline --progress --watch --open",
     "build": "yarn run build:dev",
     "build:dev": "webpack --config ./webpack.config.js --progress --profile --color --display-error-details --display-cached"
   },
