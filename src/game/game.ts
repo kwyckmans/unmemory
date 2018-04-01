@@ -1,9 +1,18 @@
 import { Player } from "./player";
 import { Card } from "./cards/card";
+import Board from "./board";
 
 export class Game {
+    static MAX_ROUNDS = 3;
+
     players: Array<Player> = new Array();
     playersList: HTMLElement = document.getElementById("players");
+
+    board: Board;
+
+    round: number = 1;
+
+    private gameScreen = document.getElementById("game-screen");
 
     constructor() {
         console.log("Starting unmemory");
@@ -28,11 +37,29 @@ export class Game {
         let registrationScreen = document.getElementById("registration");
         registrationScreen.style.display = "none";
 
-        let gameScreen = document.getElementById("game-screen");
-        gameScreen.style.display = "block";
+        this.gameScreen.style.display = "block";
         
-        let card1 = new Card(1, "hello");
-        gameScreen.appendChild(card1.getHtml);
+        this.board = new Board(this.players.length, this.round, this);
+        this.gameScreen.appendChild(this.board.getHtml());
+    }
+
+    public finishRound(){
+        this.round++;
+        // let board = document.getElementById("gameBoard");
+
+        // while(board.firstChild){
+        //     board.removeChild(board.firstChild);
+        // }
+        console.log("Round is finished");
+        if(this.round > Game.MAX_ROUNDS){
+            console.log("Game is finished!");
+        }else {
+            this.gameScreen.removeChild(document.getElementById("gameBoard"))
+
+            this.board = new Board(this.players.length, this.round, this);
+            this.gameScreen.appendChild(this.board.getHtml());
+        }
+        
     }
 
     private clearNewPlayerField(){
