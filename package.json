@@ -28,7 +28,7 @@
     "webpack-dashboard": "^1.1.1",
     "webpack-dev-server": "^3.11.3",
     "webpack-hot-middleware": "^2.21.2",
-    "yarn": "^1.5.1"
+    "yarn": "^1.22.0"
   },
   "scripts": {
     "start": "npm run server:dev",
